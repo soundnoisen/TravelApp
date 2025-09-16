@@ -35,5 +35,4 @@
 <img width="1237" height="560" alt="image" src="https://github.com/user-attachments/assets/d2f1a306-807e-41c7-8bf5-46143dad91fa" />
 
 ## Демонстрация работы приложения
-
-
+[![Watch the video](https://img.youtube.com/vi/6t34uaWYdJI/0.jpg)](https://www.youtube.com/shorts/6t34uaWYdJI)
