@@ -1,0 +1,63 @@
+package com.example.travelapp2.presentation.common
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.toFontFamily
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.travelapp2.R
+
+
+@Composable
+fun TypeOfRouteSelection(
+    selectedTypes: Set<String>,
+    onTypeSelected: (String, Boolean) -> Unit
+) {
+    val typesList = listOf(
+        "Исторический",
+        "Туристический",
+        "Приключенческий",
+        "Гастрономический",
+        "Семейный",
+        "Архитектурный",
+        "Религиозный",
+        "Культурный"
+    )
+
+    Column() {
+        typesList.forEach { convenience ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        val isChecked = !selectedTypes.contains(convenience)
+                        onTypeSelected(convenience, isChecked)
+                    }
+                    .padding(vertical = 8.dp)
+            ) {
+                CircularCheckbox(
+                    checked = selectedTypes.contains(convenience),
+                    onCheckedChange = { isChecked ->
+                        onTypeSelected(convenience, isChecked)
+                    }
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                androidx.compose.material.Text(
+                    text = convenience,
+                    fontSize = 16.sp,
+                    fontFamily = Font(R.font.inter_regular).toFontFamily()
+                )
+            }
+        }
+    }
+}
