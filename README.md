@@ -30,9 +30,13 @@
 ## Архитектура приложения
 - **MVVM + Clean Architecture**
 
+### Архитектурно-технологическая диаграмма и слои:
+
+<img width="2478" height="1218" alt="Group 303 (1)" src="https://github.com/user-attachments/assets/8862bcd3-cddf-42ab-9684-33a2be8aaee4" />
+
 ## Демонстрация интерфейса
 
-<img width="1237" height="560" alt="image" src="https://github.com/user-attachments/assets/d2f1a306-807e-41c7-8bf5-46143dad91fa" />
+<img width="1584" height="717" alt="й" src="https://github.com/user-attachments/assets/0af29458-22c2-46be-9dee-54b4b158a560" />
 
 ## Демонстрация работы приложения
 
